@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RegistActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,57 +19,11 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ID : "
-                android:textSize="20dp" />
-
-
-            <TextView
-                android:id="@+id/textView_showid"
+            <EditText
+                android:id="@+id/editText_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"/>
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/editText_main_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button_main_result"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="어디서 만날까?" />
-            <Button
-                android:id="@+id/button_show_ranking"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="장소확인하기" />
-            <Button
-                android:id="@+id/button_route_show"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="경로확인하기" />
-            <Button
-                android:id="@+id/button_friend_ranking"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="친구들 장소 확인하기" />
+                android:hint="EMAIL"/>
         </LinearLayout>
 
         <LinearLayout
@@ -78,8 +31,45 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PASSWORD"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_regist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="가입" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="취소" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/textView_main_result"
+                android:id="@+id/textView_result"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:textSize="28dp" />
@@ -87,8 +77,4 @@
 
     </LinearLayout>
 
-
-
-
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
